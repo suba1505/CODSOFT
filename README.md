@@ -1,6 +1,5 @@
 # CODSOFT
 
----
 **Project 1: Personal Portfolio Website**
 ---
 **Description:**
@@ -19,7 +18,6 @@
 **Preview:** [ Demo Link]()
 ***
 
----
 **Project 2: Green Cycle Landing Page**
 -----
 **Description:**
@@ -38,7 +36,7 @@
 
 **Preview:** [ Demo Link]()
 ***
----
+
 **Project 3: Simple Calculator**
 ----
 **Description:**
