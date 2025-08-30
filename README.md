@@ -1,6 +1,8 @@
 # CODSOFT
-**Project 1: Personal Portfolio Website**
 
+---
+**Project 1: Personal Portfolio Website**
+---
 **Description:**
   A personal portfolio created using HTML and CSS.
 
@@ -15,9 +17,11 @@
   HTML, CSS
 
 **Preview:** [ Demo Link]()
-==============================================================================================================================================================================================================
-**Project 2: Green Cycle Landing Page**
+***
 
+---
+**Project 2: Green Cycle Landing Page**
+-----
 **Description:**
   A landing page designed to promote a green cycle ecosystem.
 
@@ -33,9 +37,10 @@
   HTML, CSS
 
 **Preview:** [ Demo Link]()
-==============================================================================================================================================================================================================
+***
+---
 **Project 3: Simple Calculator**
-
+----
 **Description:**
   A basic calculator built with HTML, CSS, and JavaScript.
 
@@ -49,4 +54,4 @@
 
 **Preview:** [Click Here]()
 
-
+---
