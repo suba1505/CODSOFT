@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY CALCULATOR</title>
+  <style>
+    body {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      height:50;
+      background:light rgb(171, 240, 171);
+      font-family:callibri;
+    }
+    .cal {
+      width: 300px;
+      background:light rgb(63, 63, 142);
+      padding:70px;
+      border-radius: 40px;
+      
+    }
+
+    #disp {
+      width:100%;
+      height: 50px;
+      font-size: 24px;
+      margin-bottom: 80px;
+      padding: 10px;
+      border-radius: 16px;
+      border: color-black;
+      text-align:right;
+    }
+
+    .buttons{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap:20px;
+    }
+
+    button {
+      padding:20px;
+      font-size: 18px;
+      border:color black;
+      border-radius: 10px;
+      cursor: pointer;
+      background: white;
+      color:dark black;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #e4ef47;
+    }
+
+    .equal {
+      grid-column: span 2;
+      background:rgba(0, 0, 255, 0.771);
+    }
+    .equal:hover {
+      background:rgb(3, 144, 190);
+    }
+  </style>
+</head>
+<body>
+  <div class="cal">
+    <input type="text" id="disp" disabled>
+    <div class="buttons">
+      <button onclick="press('1')">1</button>
+      <button onclick="press('2')">2</button>
+      <button onclick="press('3')">3</button>
+      
+
+      <button onclick="press('4')">4</button>
+      
+      <button onclick="press('5')">5</button>
+      <button onclick="press('6')">6</button>
+      
+
+      <button onclick="press('7')">7</button>
+      
+      <button onclick="press('8')">8</button>
+      <button onclick="press('9')">9</button>
+      <button onclick="press('0')">0</button>
+<button onclick="press('+')">+</button>
+<button onclick="press('-')">-</button>
+      <button onclick="press('*')">*</button>
+      <button onclick="press('/')">/</button>
+      
+      <button onclick="press('.')">.</button>
+<button onclick="calculate()" class="equal">=</button>
+      <button onclick="clearDisp()" style="grid-column: span 2; background:rgb(4, 4, 196);">clear</button>
+    </div>
+  </div>
+
+  <script>
+    let display = document.getElementById("disp");
+
+    // Add value to display
+    function press(value) {
+      display.value += value;
+    }
+
+    // Clear display
+    function clearDisp() {
+      display.value = "";
+    }
+
+    // Evaluate using loop + if
+    function calculate() {
+      let expression = display.value;
+      let result = 0;
+
+      
+      let tokens = expression.split(/([+\-*/])/); 
+      result = parseFloat(tokens[0]);
+
+      for (let j = 1; j < tokens.length; j += 2) {
+        let operator = tokens[j];
+        let Num = parseFloat(tokens[j + 1]);
+
+        if (operator === "+") {
+          result += Num;
+        } 
+        else if (operator === "-") {
+          result -= Num;
+        } 
+        else if (operator === "*") {
+          result *= Num;
+        } 
+        else if (operator === "/") {
+          if (nextNum !== 0) {
+            result /= Num;
+          } 
+          
+          else {
+            alert("ZERO DIVISION IS INVALID!!");
+            return;
+          }
+        }
+      }
+      display.value = result;
+    }
+  </script>
+</body>
+</html>
+
